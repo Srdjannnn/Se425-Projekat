@@ -3,15 +3,44 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h2>Upcoming Events</h2>
-<ul>
-    {% for event in events %}
-    <li>
-        <h3>{{ event.name }}</h3>
-        <p>{{ event.date }}</p>
-        <p>{{ event.description }}</p>
-        <a href="{{ url_for('event', event_id=event.id) }}">View Seats</a>
-    </li>
-    {% endfor %}
-</ul>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Dobrodošli u Club Ticket System</h1>
+        <p>Otkrijte nezaboravne muzičke događaje u našem klubu. Kupite karte za bendove, DJ-eve i još mnogo toga!</p>
+        <a href="#events" class="btn">Pogledaj Događaje</a>
+    </div>
+</section>
+
+<section class="info">
+    <h2>Zašto Izabrati Naš Klub?</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>🎵 Raznovrsni Događaji</h3>
+            <p>Od rock koncerata do elektronskih žurki, imamo nešto za svakoga.</p>
+        </div>
+        <div class="feature">
+            <h3>🎟 Jednostavna Kupovina</h3>
+            <p>Odaberite svoje sedište i kupite kartu u nekoliko klikova.</p>
+        </div>
+        <div class="feature">
+            <h3>🌟 Nezaboravna Iskustva</h3>
+            <p>Pridružite se hiljadama zadovoljnih posetilaca.</p>
+        </div>
+    </div>
+</section>
+
+<section id="events" class="events">
+    <h2>Nadolazeći Događaji</h2>
+    <div class="event-list">
+        {% for event in events %}
+        <div class="event-card">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop" alt="{{ event.name }}">
+            <h3>{{ event.name }}</h3>
+            <p>{{ event.date }}</p>
+            <p>{{ event.description }}</p>
+            <a href="{{ url_for('event', event_id=event.id) }}" class="btn">Kupi Karte</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
