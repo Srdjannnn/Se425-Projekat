@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ event.name }}{% endblock %}
+
+{% block content %}
+<h2>{{ event.name }}</h2>
+<p>{{ event.date }}</p>
+<p>{{ event.description }}</p>
+
+<h3>Select a Seat</h3>
+<div class="seating-chart">
+    {% for seat in seats %}
+    <div class="seat {% if seat.taken %}taken{% else %}available{% endif %}" data-seat-id="{{ seat.id }}">
+        {{ seat.row }}-{{ seat.col }}
+    </div>
+    {% endfor %}
+</div>
+
+<form id="buy-form" method="post" action="">
+    <input type="hidden" name="seat_id" id="selected-seat">
+    <button type="submit" id="buy-btn" disabled>Buy Ticket</button>
+</form>
+
+<script>
+    var eventId = {{ event.id }};
+</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
