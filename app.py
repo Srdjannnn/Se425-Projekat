@@ -3,11 +3,13 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 events = [
-    {"id": 1, "name": "Band Night", "date": "2024-05-01", "description": "Live band performance"},
-    {"id": 2, "name": "DJ Party", "date": "2024-05-02", "description": "Electronic music night"},
+    {"id": 1, "name": "Band Night", "date": "2024-05-01", "description": "Live band performance", "type": "concert"},
+    {"id": 2, "name": "DJ Party", "date": "2024-05-02", "description": "Electronic music night", "type": "dj"},
+    {"id": 3, "name": "Rock Festival", "date": "2024-05-10", "description": "Multiple rock bands", "type": "concert"},
+    {"id": 4, "name": "Jazz Evening", "date": "2024-05-15", "description": "Smooth jazz vibes", "type": "jazz"},
 ]
 
-taken_seats = {1: [1, 2, 3], 2: [5, 6]}  # example taken seats per event
+taken_seats = {1: [1, 2, 3], 2: [5, 6], 3: [10, 20], 4: [15]}
 
 @app.route('/')
 def home():
