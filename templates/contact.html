@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h2>Kontaktirajte Nas</h2>
+<p>Adresa: Ulica Kluba 123, Grad</p>
+<p>Telefon: +381 11 123 456</p>
+<p>Email: info@klub.com</p>
+<form>
+    <label for="name">Ime:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="message">Poruka:</label><br>
+    <textarea id="message" name="message"></textarea><br>
+    <button type="submit">Pošalji</button>
+</form>
+{% endblock %}

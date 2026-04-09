@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+<h2>Galerija</h2>
+<div class="gallery">
+    <img src="{{ url_for('static', filename='event1.jpg') }}" alt="Događaj 1">
+    <img src="{{ url_for('static', filename='event2.jpg') }}" alt="Događaj 2">
+    <img src="{{ url_for('static', filename='event3.jpg') }}" alt="Događaj 3">
+</div>
+{% endblock %}

@@ -32,11 +32,16 @@ Glavni ciljni korisnici su posetioci kluba koji žele da kupe karte za događaje
 - Prikaz detalja događaja sa mapom sedišta.
 - Odabir dostupnog sedišta.
 - Potvrda kupovine karte.
+- Prikaz informacija o klubu (About).
+- Galerija slika događaja.
+- Kontakt forma.
+- Uslovi korišćenja.
 
 ### Nefunkcionalni Zahtevi
 
 - Sistem mora biti brz i responzivan.
-- Jednostavan UI/UX.
+- Jednostavan UI/UX sa modernim dizajnom.
+- Responsive dizajn za mobilne uređaje.
 - Bezbednost: Osnovna validacija.
 
 ## Use Case Scenariji
@@ -44,6 +49,10 @@ Glavni ciljni korisnici su posetioci kluba koji žele da kupe karte za događaje
 1. **Pregled Događaja**: Korisnik otvara početnu stranu i vidi listu događaja.
 2. **Odabir Sedišta**: Korisnik bira događaj, vidi mapu sedišta i klikne na dostupno sedišće.
 3. **Kupovina Karte**: Korisnik potvrđuje kupovinu i dobija potvrdu.
+4. **Pregled Informacija o Klubu**: Korisnik poseti About stranu da sazna više o klubu.
+5. **Pregled Galerije**: Korisnik gleda slike prethodnih događaja.
+6. **Kontakt**: Korisnik šalje poruku preko kontakt forme.
+7. **Uslovi Korišćenja**: Korisnik čita pravila sajta.
 
 ## Tehnike Prioritizacije Zahteva (MoSCoW)
 
@@ -54,7 +63,7 @@ Glavni ciljni korisnici su posetioci kluba koji žele da kupe karte za događaje
 
 ## Definicija MVP-a (Minimum Viable Product)
 
-MVP uključuje osnovne funkcionalnosti: pregled događaja, odabir sedišta i simulacija kupovine. Sistem koristi in-memory podatke bez baze.
+MVP uključuje osnovne funkcionalnosti: pregled događaja, odabir sedišta, simulacija kupovine, informacije o klubu, galerija, kontakt i uslovi. Sistem koristi in-memory podatke bez baze, sa modernim responsive dizajnom.
 
 ## Potrebni Dijagrami
 
@@ -79,7 +88,7 @@ MVP uključuje osnovne funkcionalnosti: pregled događaja, odabir sedišta i sim
 ## Tehnologije Koje će Biti Korišćene
 
 - **Backend**: Python Flask
-- **Frontend**: HTML, CSS, JavaScript
+- **Frontend**: HTML, CSS (sa responsive dizajnom), JavaScript
 - **Verzionisanje**: Git
 - **Organizacija**: Trello
 

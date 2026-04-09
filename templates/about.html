@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<h2>O Klubu</h2>
+<p>Dobrodošli u naš klub! Mi smo mesto gde se okupljaju ljubitelji muzike, organizujući događaje sa bendovima, DJ-evima i drugim izvođačima.</p>
+<p>Naš cilj je pružiti nezaboravna iskustva kroz kvalitetnu muziku i atmosferu.</p>
+<img src="{{ url_for('static', filename='club.jpg') }}" alt="Klub" style="max-width: 100%; height: auto;">
+{% endblock %}

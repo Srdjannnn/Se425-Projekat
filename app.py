@@ -13,6 +13,22 @@ taken_seats = {1: [1, 2, 3], 2: [5, 6]}  # example taken seats per event
 def home():
     return render_template('home.html', events=events)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
+
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+
 @app.route('/event/<int:event_id>')
 def event(event_id):
     event = next((e for e in events if e['id'] == event_id), None)
